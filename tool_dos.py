@@ -38,22 +38,22 @@ def function1():
                     flag1 = 1
                 print('')
         if user_input2 == '1':
-            exec(open('E:/Annie Madam/Biology/Pancreas/fat_parameter_test/threshold_image.py').read())
+            exec(open('threshold_image.py').read())
             print('\nTask completed')
         elif user_input2 == '2':
-            exec(open('E:/Annie Madam/Biology/Pancreas/fat_parameter_test/threshold_manual_image.py').read())
+            exec(open('threshold_manual_image.py').read())
             print('\nTask completed')
         elif user_input2 == 'b':
             pass
         print('')
     elif user_input1 == '2':
-        exec(open('E:/Annie Madam/Biology/Pancreas/fat_parameter_test/white_groups.py').read())
+        exec(open('white_groups.py').read())
         print('\nTask completed')
     elif user_input1 == '3':
-        exec(open('E:/Annie Madam/Biology/Pancreas/fat_parameter_test/fat_from_groups.py').read())
+        exec(open('fat_from_groups.py').read())
         print('\nTask completed')
     elif user_input1 == '4':
-        exec(open('E:/Annie Madam/Biology/Pancreas/fat_parameter_test/fat_results_compare.py').read())
+        exec(open('fat_results_compare.py').read())
         print('\nTask completed')
     return user_input1
     
