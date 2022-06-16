@@ -4,13 +4,14 @@ import matplotlib
 import matplotlib.pyplot as plt
 import math
 
-Image.MAX_IMAGE_PIXELS = None
+Image.MAX_IMAGE_PIXELS = 1358369000 #None
 image1 = input('Enter image name with extension: ')
 #im = Image.open('shot7.tif')
 im = Image.open(image1)
 #im.show()
 
 imarray = np.array(im)
+im.close()
 print(imarray.shape, imarray.size, len(imarray))
 
 threshold1 = input('Enter threshold value: ')
