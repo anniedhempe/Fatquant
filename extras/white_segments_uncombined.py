@@ -10,7 +10,9 @@ import skimage
 import skimage.viewer
 import csv
 
-path_in = ('shot5_bi.tif')
+image1 = input('Enter thresholded image name with extension: ')
+#path_in = ('shot7_bi.tif')
+path_in = (str(image1))
 img=cv.imread(path_in)
 
 imarray = np.array(img)
