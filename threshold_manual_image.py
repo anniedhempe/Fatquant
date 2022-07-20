@@ -7,14 +7,14 @@ import math
 image1 = input('Enter image name with extension: ')
 #im = Image.open('shot7.tif')
 im = Image.open(image1)
-#im = Image.open('E:/Annie Madam/Biology/Pancreas/liver_images/non-fatty/samples/' + str(image1))
+#im = Image.open('E:/Biology/Pancreas/samples/' + str(image1))
 #im = Image.open('GTEX-1117F-1726 (1).svs')
 #im.show()
 
 imarray = np.array(im)
 print(imarray.shape, imarray.size, len(imarray))
 
-clr_resp = input("Press 'y' for default manual color value (R,G,B: 255,255,0): ") # User color response
+clr_resp = input("Enter 'y' if you want to use default manually tagged color value (R,G,B: 255,255,0): ") # User color response
 if clr_resp != 'y':
     r_val = int(input('Enter value for Red channel: '))
     g_val = int(input('Enter value for Green channel: '))

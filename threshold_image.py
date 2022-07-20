@@ -54,7 +54,7 @@ while (i >= 0):
     image1_name = image1_name + image1[i]
     i = i - 1
 image1_name = image1_name[::-1]
-image1_name = image1_name + '_bi.' + image1_exten
+image1_name = image1_name + '_' + str(threshold1) + '.' + image1_exten
 data.save(image1_name)
-#data.save('E:/Annie Madam/Biology/Pancreas/liver_images/non-fatty/thresholded_samples/' + str(image1_name))
+#data.save('E:/Biology/Pancreas/thresholded_samples/' + str(image1_name))
 #data.save('shot7_bi2.tif')
