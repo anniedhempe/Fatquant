@@ -13,19 +13,19 @@ This tool was designed for the experiment mentioned in:
 ## Tutorial
 (A raw image `Figure_28.png` and its fat tagged version `Figure_28_tagged.png` from the directiory **Small_samples** will be referred to demonstrate fat analysis)
 
-1) Once this repository is downloaded in your local machine, open the Fatquant folder using an IDE that supports Python 3 (e.g. Visual Studio Code).
+1) Once this repository is downloaded in a local machine, open the Fatquant folder using an IDE that supports Python 3 (e.g. Visual Studio Code).
 2) Run the file named `tool_dos.py` under an interpreter of Anaconda and execute options from the menu as per requirements.
 
 #### Option 1
 This option allows binary thresholding to be performed on either a raw image or a tagged image in each attempt.
 
-For raw image, you can refer the following inputs:
+For raw image, users can refer the following inputs:
 
 `Enter threshold value: Small_samples/Figure_28.png`
 
 `Enter threshold value: 228`
 
-For image with manual tagged fats, you can refer the following inputs:
+For image with manual tagged fats, users can refer the following inputs:
 
 `Enter image name with extension: Small_samples/Figure_28_tagged.png`
 
@@ -42,13 +42,13 @@ For image with manual tagged fats, you can refer the following inputs:
 #### Option 2
 This option allows segmentation of white pixels to be performed on binary thresholded raw image or manually tagged image.
 
-For raw image, you can refer the following inputs:
+For raw image, users can refer the following inputs:
 
 `Enter thresholded image name with extension: Small_samples/Figure_28_228.png`
 
 `Enter 'y' if the thresholded image is of manually tagged data: n`
 
-For image with manual tagged fats, you can refer the following inputs:
+For image with manual tagged fats, users can refer the following inputs:
 
 `Enter thresholded image name with extension: Small_samples/Figure_28_tagged_bi.png`
 
@@ -56,6 +56,8 @@ For image with manual tagged fats, you can refer the following inputs:
 
 #### Option 3
 This option allows quantification of fats from white segments generated through Option 2.
+
+Users can refer the following inputs:
 
 `Enter original image name with extension: Small_samples/Figure_28.png`
 
@@ -88,6 +90,8 @@ machine tagged value (R,G,B: 0,255,255)`
 
 #### Option 4
 This option allows comparison of machine identifed fats (generated through Option 3) with manual tagged fats.
+
+Users can refer the following inputs:
 
 `Enter machine tagged image name with extension: Small_samples/Figure_28_228_20_200.png`
 
