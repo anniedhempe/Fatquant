@@ -50,6 +50,6 @@ For raw image, you can refer the following inputs:
 
 For image with manual tagged fats, you can refer the following inputs:
 
-`Enter thresholded image name with extension: Small_samples/Figure_28_tagged_bi.png`
+`Enter thresholded image name with extension: Small_samples/Figure_28_tagged_bi.png
 
-`Enter 'y' if the thresholded image is of manually tagged data: y`
+Enter 'y' if the thresholded image is of manually tagged data: y`
