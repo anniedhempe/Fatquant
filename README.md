@@ -8,7 +8,7 @@
 * Other needed package name(s): pillow 
 
 ## Tutorial
-(A raw image `Figure_26.png` and its fat tagged version `Figure_26_tagged.png` from the directiory **Small_samples** will be referred to demonstrate fat analysis)
+(A raw image `Figure_28.png` and its fat tagged version `Figure_28_tagged.png` from the directiory **Small_samples** will be referred to demonstrate fat analysis)
 
 1) Once this repository is downloaded in your local machine, open the Fatquant folder using an IDE that supports Python 3 (e.g. Visual Studio Code).
 2) Run the file named `tool_dos.py` under an interpreter of Anaconda and execute options from the menu as per requirements.
