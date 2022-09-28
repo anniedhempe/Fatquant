@@ -55,7 +55,7 @@ For image with manual tagged fats, you can refer the following inputs:
 `Enter 'y' if the thresholded image is of manually tagged data: y`
 
 #### Option 3
-This option allows quantification of fats from white segments generated through Option 2
+This option allows quantification of fats from white segments generated through Option 2.
 
 `Enter original image name with extension: Small_samples/Figure_28.png`
 
@@ -84,4 +84,38 @@ machine tagged value (R,G,B: 0,255,255)`
 
 `Enter maximum fat diameter: 200`
 
-(Default options for white groups name and color value would have given the output but manual entrywas chosen to demonstrate what to enter)
+(Default options for white groups name and color value would have given the output but manual entry was chosen to demonstrate what to enter)
+
+#### Option 4
+This option allows comparison of machine identifed fats (generated through Option 3) with manual tagged fats.
+
+`Enter machine tagged image name with extension: Small_samples/Figure_28_228_20_200.png`
+
+`Enter manual tagged image name with extension: Small_samples/Figure_28_tagged.png`
+
+`Enter 'y' for default white group names: n`
+
+`Enter file name for manually tagged white groups combined (extension 'csv'): white_groups_combined_manual.csv`
+
+`Enter file name for manually tagged white groups segmented (extension 'csv'): white_groups_segmented_manual.csv`
+
+`Enter file name for machine tagged fat areas (extension 'csv'): Small_samples/Figure_28_228_20_200.csv`
+
+`Default color value:  
+machine tagged value (R,G,B: 0,255,255)`
+
+`Enter 'y' if you want to use this value: y`
+
+`Enter manually tagged value for Red channel: 255`
+
+`Enter manually tagged value for Green channel: 255`
+
+`Enter manually tagged value for Blue channel: 0`
+
+`Enter intersection value for Red channel: 127`
+
+`Enter intersection value for Green channel: 255`
+
+`Enter intersection value for Blue channel: 127`
+
+(Default options for white groups name would have given the output but manual entry was chosen to demonstrate what to enter)
