@@ -20,13 +20,13 @@ This tool was designed for the experiment mentioned in:
 This option allows binary thresholding to be performed on either a raw image or a tagged image in each attempt.
 
 For raw image, you can refer the following inputs:
-`Enter threshold value: Small_samples/Figure_28.png`
-`Enter threshold value: 228`
+`\nEnter threshold value: Small_samples/Figure_28.png`
+`\nEnter threshold value: 228`
 
 For image with manual tagged fats, you can refer the following inputs:
-`Enter image name with extension: Small_samples/Figure_28_tagged.png`
-`Enter 'y' if you want to use default manually tagged color value (R,G,B: 255,255,0): n`
-`Enter value for Red channel: 255`
-`Enter value for Green channel: 255`
-`Enter value for Blue channel: 0`
+`\nEnter image name with extension: Small_samples/Figure_28_tagged.png`
+`\nEnter 'y' if you want to use default manually tagged color value (R,G,B: 255,255,0): n`
+`\nEnter value for Red channel: 255`
+`\nEnter value for Green channel: 255`
+`\nEnter value for Blue channel: 0`
 (For this image, default color option would have given the output but manual entry of color was chosen to demonstrate what values to enter)
