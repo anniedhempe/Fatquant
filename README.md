@@ -53,3 +53,35 @@ For image with manual tagged fats, you can refer the following inputs:
 `Enter thresholded image name with extension: Small_samples/Figure_28_tagged_bi.png`
 
 `Enter 'y' if the thresholded image is of manually tagged data: y`
+
+#### Option 3
+This option allows quantification of fats from white segments generated through Option 2
+
+`Enter original image name with extension: Small_samples/Figure_28.png`
+
+`Enter thresholded image name with extension: Small_samples/Figure_28_228.png`
+
+`Enter output image name (exclude exrtension): Small_samples/Figure_28_228`
+
+`Enter 'y' for default white group names: n`
+
+`Enter white groups combined name (extension 'csv'): white_groups_combined.csv`
+
+`Enter white groups segmented name (extension 'csv'): white_groups_segmented.csv`
+
+`Default color value:  
+machine tagged value (R,G,B: 0,255,255)`
+
+`Enter 'y' if you want to use this value: n`
+
+`Enter machine tagged value for Red channel: 0`
+
+`Enter machine tagged value for Green channel: 255`
+
+`Enter machine tagged value for Blue channel: 255`
+
+`Enter minimum fat diameter: 20`
+
+`Enter maximum fat diameter: 200`
+
+(Default options for white groups name and color value would have given the output but manual entrywas chosen to demonstrate what to enter)
