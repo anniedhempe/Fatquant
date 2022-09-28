@@ -37,7 +37,7 @@ For image with manual tagged fats, you can refer the following inputs:
 
 `Enter value for Blue channel: 0`
 
-(For this image, default color option would have given the output but manual entry of color was chosen to demonstrate what values to enter)
+(*For this image, default color option would have given the output but manual entry of color was chosen to demonstrate what values to enter*)
 
 #### Option 2
 This option allows segmentation of white pixels to be performed on binary thresholded raw image or manually tagged image.
@@ -84,7 +84,7 @@ machine tagged value (R,G,B: 0,255,255)`
 
 `Enter maximum fat diameter: 200`
 
-(Default options for white groups name and color value would have given the output but manual entry was chosen to demonstrate what to enter)
+(*Default options for white groups name and color value would have given the output but manual entry was chosen to demonstrate what to enter*)
 
 #### Option 4
 This option allows comparison of machine identifed fats (generated through Option 3) with manual tagged fats.
@@ -118,7 +118,7 @@ machine tagged value (R,G,B: 0,255,255)`
 
 `Enter intersection value for Blue channel: 127`
 
-(Default options for white groups name would have given the output but manual entry was chosen to demonstrate what to enter)
+(*Default options for white groups name would have given the output but manual entry was chosen to demonstrate what to enter*)
 
 ### Extra programs
 There are three extra programs included in this repository which are not needed for running Fatquant tool but their usages are mentioned below.
