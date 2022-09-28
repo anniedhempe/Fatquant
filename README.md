@@ -3,6 +3,9 @@
 
 ![alt text](Fatquant_readme_display.png)
 
+This tool was designed for the experiment mentioned in:
+[https://www.biorxiv.org/content/10.1101/2021.12.13.472341v1]
+
 ### Requirements
 * Python 3 distribution: Anaconda
 * Other needed package name(s): pillow 
