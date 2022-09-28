@@ -266,7 +266,7 @@ def fats():
         total_manual_area = total_manual_area + segmented_fats_area_man[i]
         manual_annot_fat_seg = manual_annot_fat_seg + 1
     #print('manually annotated area:', total_manual_area, manual_annot_fat_seg)
-    print('Manually annotated area:', total_manual_area)  
+    print('Manually annotated area: ', total_manual_area)  
     #print()
     total_machine_area = int(fat_areas_mac[-1][1])
     print('Machine annotated area: ', total_machine_area)
