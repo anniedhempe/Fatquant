@@ -20,8 +20,10 @@ This tool was designed for the experiment mentioned in:
 This option allows binary thresholding to be performed on either a raw image or a tagged image in each attempt.
 
 For raw image, you can refer the following inputs:
-`\nEnter threshold value: Small_samples/Figure_28.png`
-`\nEnter threshold value: 228`
+
+`Enter threshold value: Small_samples/Figure_28.png`
+
+`nEnter threshold value: 228`
 
 For image with manual tagged fats, you can refer the following inputs:
 `\nEnter image name with extension: Small_samples/Figure_28_tagged.png`
