@@ -51,8 +51,8 @@ if group_names == 'y':
     segmented_file = open('white_groups_segmented.csv', 'r', newline='', encoding='utf16')
     csv_reader2 = csv.reader(segmented_file)
 else:
-    combined_name = input("Enter white groups combined name (extension 'csv'): ")
-    segmented_name = input("Enter white groups segmented name (extension 'csv'): ")
+    combined_name = input("Enter file name for white groups combined name (extension 'csv'): ")
+    segmented_name = input("Enter file name for white groups segmented name (extension 'csv'): ")
     combined_file = open(combined_name, 'r', newline='', encoding='utf16')
     csv_reader1 = csv.reader(combined_file)
     segmented_file = open(segmented_name, 'r', newline='', encoding='utf16')

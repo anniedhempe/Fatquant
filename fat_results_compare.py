@@ -68,7 +68,7 @@ else:
 file_name = input("\nEnter file name for machine tagged fat areas (extension 'csv'): ")
 file_file = open(file_name, 'r', newline='', encoding='utf16')
 csv_reader3 = csv.reader(file_file)
-    
+
 print("\nDefault color value:")
 print('machine tagged value (R,G,B: 0,255,255)')
 default_color = input("\nEnter 'y' if you want to use this value: ")
