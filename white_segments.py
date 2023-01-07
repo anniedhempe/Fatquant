@@ -933,7 +933,7 @@ def white_segments(y_axis, x_axis, s_size):
     print('len',len(section_items_final))
     print('Time taken: ' + str(time.time() - time1) + ' seconds')
     viewer = skimage.viewer.ImageViewer(np.array(section_items_final))
-    #viewer.show()
+    viewer.show()
     
     if image_type == 'y':
         output_file_open = open('white_groups_combined_manual.csv', 'w', newline='', encoding='utf16')

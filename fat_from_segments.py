@@ -111,38 +111,6 @@ while (i < len(combined_dataset)):
                 i1 = i1 + 1
         i = i + 1
 
-# identify white groups in boundary
-bd_groups_combined = []
-count_dataset = -1
-for line in combined_dataset:
-    count_dataset = count_dataset + 1
-    for i in line:
-        #if len(i) > 0:
-        x_i = int(i[0][0]) % x_total
-        y_i = math.floor(int(i[0][0]) / x_total)
-        x_i = x_i * s_size
-        y_i = y_i * s_size
-        i1 = 1
-        flag1 = 0
-        while (i1 < len(i)):
-            if (int(i[i1][0]) + y_i == 0) or (int(i[i1][0]) + y_i == y_axis - 1):
-                bd_groups_combined.append(count_dataset)
-                flag1 = 1
-                break
-            i2 = int(i[i1][1])
-            while (i2 <= int(i[i1][2])):
-                if (i2 + x_i == 0) or (i2 + x_i == x_axis - 1):
-                    bd_groups_combined.append(count_dataset)
-                    flag1 = 1
-                    break
-                #img_grid[((y_i + int(i[i1][0])) * x_axis) + x_i + i2].append([count_dataset])
-                i2 = i2 + 1
-            if flag1 == 1:
-                break
-            i1 = i1 + 1
-        if flag1 == 1:
-            break
-
 i = 0
 i1 = -1
 i2 = -1
@@ -163,35 +131,6 @@ for line in csv_reader2:
     elif len(line) == 3:
         #print(i,i1,i2)
         segmented_dataset[i2][i3].append([int(line[0]), int(line[1]), int(line[2])])
-        
-bd_groups_segmented = []
-count_dataset = -1
-for line in segmented_dataset:
-    count_dataset = count_dataset + 1
-    x_i = line[0] % x_total
-    y_i = math.floor(line[0] / x_total)
-    x_i = x_i * s_size
-    y_i = y_i * s_size
-
-    for i in range(1,len(line)):
-        flag1 = 0
-        i1 = 0
-        while (i1 < len(line[i])):
-            if (int(line[i][i1][0]) + y_i == 0) or (int(line[i][i1][0]) + y_i == y_axis - 1):
-                bd_groups_segmented.append([count_dataset, i])
-                flag1 = 1
-                break
-            i2 = int(line[i][i1][1])
-            while (i2 <= int(line[i][i1][2])):
-                if (i2 + x_i == 0) or (i2 + x_i == x_axis - 1):
-                    bd_groups_segmented.append([count_dataset, i])
-                    flag1 = 1
-                    break
-                #img_grid[((y_i + int(line[i][i1][0])) * x_axis) + x_i + i2].append([count_dataset, i])
-                i2 = i2 + 1
-            if flag1 == 1:
-                break
-            i1 = i1 + 1
 
 """print('len:', len(combined_dataset))
 for i in combined_dataset[0]:
@@ -933,9 +872,9 @@ def fats():
     combined_fats_bd_area = []
     segmented_fats_bd_area = []
     
-    for temp1 in range(len(bd_groups_combined)):
+    for temp1 in range(len(combined_dataset_boundary)):
         temp2 = 0
-        for i in combined_dataset[bd_groups_combined[temp1]]:
+        for i in combined_dataset[combined_dataset_boundary[temp1]]:
             x_i = int(i[0][0]) % x_total
             y_i = math.floor(int(i[0][0]) / x_total)
             x_i = x_i * s_size
@@ -949,18 +888,19 @@ def fats():
                 i1 = i1 + 1
         combined_fats_bd_area.append(temp2)
     
-    for temp1 in range(len(bd_groups_segmented)):
-        temp2 = 0
-        for i in segmented_dataset[bd_groups_segmented[temp1][0]][bd_groups_segmented[temp1][1]]:
-            x_i = i[0] % x_total
-            y_i = math.floor(i[0] / x_total)
-            x_i = x_i * s_size
-            y_i = y_i * s_size
-            i2 = int(i[1])
-            while (i2 <= int(i[2])):
-                temp2 = temp2 + 1
-                i2 = i2 + 1
-        segmented_fats_bd_area.append(temp2)
+    for temp1 in range(len(segmented_dataset_boundary)):
+        for temp2 in segmented_dataset_boundary[temp1]:
+            temp3 = 0
+            for i in segmented_dataset[temp1][temp2 + 1]:
+                x_i = i[0] % x_total
+                y_i = math.floor(i[0] / x_total)
+                x_i = x_i * s_size
+                y_i = y_i * s_size
+                i2 = int(i[1])
+                while (i2 <= int(i[2])):
+                    temp3 = temp3 + 1
+                    i2 = i2 + 1
+            segmented_fats_bd_area.append(temp3)
             
         
     viewer = skimage.viewer.ImageViewer(imarray)
@@ -990,21 +930,16 @@ def fats():
         csv_write1.writerow(i)
     del fat_areas
     
-    """print('bd_groups_segmented total: ', bd_groups_segmented)
-    for i in segmented_fats_bd_area:
-        print(i)
-    print()"""
-    
     # store white segments on boundary in a file 
     white_bd_areas = []
     white_bd_areas.append(['Sl. no.', 'Area (in pixels)'])
     total_white_bd = 0
     total_area = 0
-    for i in range(len(bd_groups_combined)):
+    for i in range(len(combined_fats_bd_area)):
         total_white_bd = total_white_bd + 1
         total_area = total_area + combined_fats_bd_area[i]
         white_bd_areas.append([total_white_bd, combined_fats_bd_area[i]])
-    for i in range(len(bd_groups_segmented)):
+    for i in range(len(segmented_fats_bd_area)):
         total_white_bd = total_white_bd + 1
         total_area = total_area + segmented_fats_bd_area[i]
         white_bd_areas.append([total_white_bd, segmented_fats_bd_area[i]])
