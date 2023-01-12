@@ -1,1 +1,1 @@
-
+THis directory contains 6 small samples of pancreas images which can be used to check strength and weakness of Fatquant in detecting various types of fat cells.
