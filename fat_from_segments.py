@@ -921,6 +921,7 @@ def fats():
         fat_areas.append([total_fats, segmented_fats_area[i]])
     fat_areas.append([])
     fat_areas.append(['total area', total_area])
+    print('Area (in pixels) covered by fat: ', total_area)
     
     fat_areas_file = open(output_image_name + '.' + 'csv', 'w', newline='', encoding='utf16')
     #fat_areas_file = open('E:/Biology/Pancreas/areas_in_samples/' + output_image_name + '.' + 'csv', 'w', newline='', encoding='utf16')
