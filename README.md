@@ -86,7 +86,7 @@ machine tagged value (R,G,B: 0,255,255)`
 
 `Enter maximum fat diameter: 200`
 
-A file named **Figure_28_228_20_200.csv"" will be generated which stores the total area (in pixels) identified as fats by Fatquant.
+A file named **Figure_28_228_20_200.csv** will be generated which stores the total area (in pixels) identified as fats by Fatquant.
 
 (*Default options for white groups name and color value would have given the output but manual entry was chosen to demonstrate what to enter*)
 
