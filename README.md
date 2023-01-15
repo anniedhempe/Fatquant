@@ -11,7 +11,7 @@ This tool was designed for the experiment mentioned in:
 * Other needed Python package name(s): pillow 
 
 ## Tutorial
-(A raw image `Figure_28.png` and its fat tagged version `Figure_28_tagged.png` from the directiory **Small_samples** will be referred to demonstrate fat analysis)
+(A raw image `1.png` and its fat tagged version `1_tagged.png` from the directiory **Pancreas_samples** will be referred to demonstrate fat analysis)
 
 1) Once this repository is downloaded in a local machine, open the Fatquant folder using an IDE that supports Python 3 (e.g. Visual Studio Code).
 2) Run the file named `tool_dos.py` under an interpreter of Anaconda and execute options from the menu as per requirements.
@@ -21,13 +21,13 @@ This option allows binary thresholding to be performed on either a raw image or 
 
 For raw image, users can refer the following inputs:
 
-`Enter threshold value: Small_samples/Figure_28.png`
+`Enter threshold value: Pancreas_samples/1.png`
 
-`Enter threshold value: 228`
+`Enter threshold value: 230`
 
 For image with manual tagged fats, users can refer the following inputs:
 
-`Enter image name with extension: Small_samples/Figure_28_tagged.png`
+`Enter image name with extension: Pancreas_samples/1_tagged.png`
 
 `Enter 'y' if you want to use default manually tagged color value (R,G,B: 255,255,0): n`
 
@@ -44,13 +44,13 @@ This option allows segmentation of white pixels to be performed on binary thresh
 
 For raw image, users can refer the following inputs:
 
-`Enter thresholded image name with extension: Small_samples/Figure_28_228.png`
+`Enter thresholded image name with extension: Pancreas_samples/1_230.png`
 
 `Enter 'y' if the thresholded image is of manually tagged data: n`
 
 For image with manual tagged fats, users can refer the following inputs:
 
-`Enter thresholded image name with extension: Small_samples/Figure_28_tagged_bi.png`
+`Enter thresholded image name with extension: Pancreas_samples/1_tagged_bi.png`
 
 `Enter 'y' if the thresholded image is of manually tagged data: y`
 
@@ -59,11 +59,11 @@ This option allows quantification of fats from white segments generated through 
 
 Users can refer the following inputs:
 
-`Enter original image name with extension: Small_samples/Figure_28.png`
+`Enter original image name with extension: Pancreas_samples/1.png`
 
-`Enter thresholded image name with extension: Small_samples/Figure_28_228.png`
+`Enter thresholded image name with extension: Pancreas_samples/1_230.png`
 
-`Enter output image name (exclude exrtension): Small_samples/Figure_28_228`
+`Enter output image name (exclude exrtension): Pancreas_samples/1_230`
 
 `Enter 'y' for default white group names: n`
 
@@ -82,11 +82,11 @@ machine tagged value (R,G,B: 0,255,255)`
 
 `Enter machine tagged value for Blue channel: 255`
 
-`Enter minimum fat diameter: 20`
+`Enter minimum fat diameter: 27`
 
-`Enter maximum fat diameter: 200`
+`Enter maximum fat diameter: 130`
 
-A file named **Figure_28_228_20_200.csv** will be generated which stores the total area (in pixels) identified as fats by Fatquant.
+A file named **1_230_27_130.csv** will be generated which stores the total area (in pixels) identified as fats by Fatquant.
 
 (*Default options for white groups name and color value would have given the output but manual entry was chosen to demonstrate what to enter*)
 
@@ -95,9 +95,9 @@ This option allows comparison of machine identifed fats (generated through Optio
 
 Users can refer the following inputs:
 
-`Enter machine tagged image name with extension: Small_samples/Figure_28_228_20_200.png`
+`Enter machine tagged image name with extension: Pancreas_samples/1_230_27_130.png`
 
-`Enter manual tagged image name with extension: Small_samples/Figure_28_tagged.png`
+`Enter manual tagged image name with extension: Pancreas_samples/1_tagged.png`
 
 `Enter 'y' for default white group names: n`
 
@@ -105,7 +105,7 @@ Users can refer the following inputs:
 
 `Enter file name for manually tagged white groups segmented (extension 'csv'): white_groups_segmented_manual.csv`
 
-`Enter file name for machine tagged fat areas (extension 'csv'): Small_samples/Figure_28_228_20_200.csv`
+`Enter file name for machine tagged fat areas (extension 'csv'): Pancreas_samples/1_230_27_130.csv`
 
 `Default color value:  
 machine tagged value (R,G,B: 0,255,255)`
