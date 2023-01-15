@@ -11,7 +11,7 @@ This tool was designed for the experiment mentioned in:
 * Other needed Python package name(s): pillow 
 
 ## Tutorial
-(A raw image `1.png` and its fat tagged version `1_tagged.png` from the directiory **Pancreas_samples** will be referred to demonstrate fat analysis)
+(A raw image `1.tif` and its fat tagged version `1_tagged.png` from the directiory **Pancreas_samples** will be referred to demonstrate fat analysis)
 
 1) Once this repository is downloaded in a local machine, open the Fatquant folder using an IDE that supports Python 3 (e.g. Visual Studio Code).
 2) Run the file named `tool_dos.py` under an interpreter of Anaconda and execute options from the menu as per requirements.
@@ -21,7 +21,7 @@ This option allows binary thresholding to be performed on either a raw image or 
 
 For raw image, users can refer the following inputs:
 
-`Enter threshold value: Pancreas_samples/1.png`
+`Enter threshold value: Pancreas_samples/1.tif`
 
 `Enter threshold value: 230`
 
@@ -44,7 +44,7 @@ This option allows segmentation of white pixels to be performed on binary thresh
 
 For raw image, users can refer the following inputs:
 
-`Enter thresholded image name with extension: Pancreas_samples/1_230.png`
+`Enter thresholded image name with extension: Pancreas_samples/1_230.tif`
 
 `Enter 'y' if the thresholded image is of manually tagged data: n`
 
@@ -59,9 +59,9 @@ This option allows quantification of fats from white segments generated through 
 
 Users can refer the following inputs:
 
-`Enter original image name with extension: Pancreas_samples/1.png`
+`Enter original image name with extension: Pancreas_samples/1.tif`
 
-`Enter thresholded image name with extension: Pancreas_samples/1_230.png`
+`Enter thresholded image name with extension: Pancreas_samples/1_230.tif`
 
 `Enter output image name (exclude exrtension): Pancreas_samples/1_230`
 
@@ -95,7 +95,7 @@ This option allows comparison of machine identifed fats (generated through Optio
 
 Users can refer the following inputs:
 
-`Enter machine tagged image name with extension: Pancreas_samples/1_230_27_130.png`
+`Enter machine tagged image name with extension: Pancreas_samples/1_230_27_130.tif`
 
 `Enter manual tagged image name with extension: Pancreas_samples/1_tagged.png`
 
