@@ -87,6 +87,18 @@ def combine_segments(section_n):
 def white_segments(y_axis, x_axis, s_size):
     global section_items
     global segmented_areas
+    
+    image_location = ''
+    i = len(path_in) - 1
+    while (path_in[i] != '/'):
+        image_location = image_location + path_in[i]
+        i = i - 1
+    image_location = image_location[::-1]
+    image_location_final = ''
+    i = 0
+    while (i < len(path_in) - len(image_location)):
+        image_location_final = image_location_final + path_in[i]
+        i = i + 1
 
     print(y_total, x_total, yx_total)
     
@@ -936,14 +948,14 @@ def white_segments(y_axis, x_axis, s_size):
     viewer.show()
     
     if image_type == 'y':
-        output_file_open = open('white_groups_combined_manual.csv', 'w', newline='', encoding='utf16')
+        output_file_open = open(image_location_final + 'white_groups_combined_manual.csv', 'w', newline='', encoding='utf16')
         csv_write1 = csv.writer(output_file_open, delimiter = ',')
-        output_file_open = open('white_groups_segmented_manual.csv', 'w', newline='', encoding='utf16')
+        output_file_open = open(image_location_final + 'white_groups_segmented_manual.csv', 'w', newline='', encoding='utf16')
         csv_write2 = csv.writer(output_file_open, delimiter = ',')
     else:
-        output_file_open = open('white_groups_combined.csv', 'w', newline='', encoding='utf16')
+        output_file_open = open(image_location_final + 'white_groups_combined.csv', 'w', newline='', encoding='utf16')
         csv_write1 = csv.writer(output_file_open, delimiter = ',')
-        output_file_open = open('white_groups_segmented.csv', 'w', newline='', encoding='utf16')
+        output_file_open = open(image_location_final + 'white_groups_segmented.csv', 'w', newline='', encoding='utf16')
         csv_write2 = csv.writer(output_file_open, delimiter = ',')
 
     # write to csv file
