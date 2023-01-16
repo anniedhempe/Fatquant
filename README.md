@@ -133,5 +133,8 @@ There are three programs included in the **extras** folder of this repository wh
 2) `white_segments_uncombined.py` is used to get a view of white segments where the tiles are not combined. File `tile_size_350_sample.png` is an output generated with this program where the parameter value of `s_size` (tile size) was set to `350`.
 
 
-Apart from these, there is a Graphical User Interface based application named `Fatquant_GUI_trial.exe` in [https://github.com/nehalkalita/Fatquant-GUI]
+
+Apart from these, there is a Graphical User Interface based application named `Fatquant_GUI_trial.exe` in 
+[https://github.com/nehalkalita/Fatquant-GUI]
+
 which runs particularly on Windows operating system.
