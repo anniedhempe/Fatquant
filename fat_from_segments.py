@@ -6,6 +6,7 @@ import random
 import skimage
 import skimage.viewer
 import csv
+import time
 
 Image.MAX_IMAGE_PIXELS = None
 original_image_name = input("Enter original image name with extension: ")
@@ -243,6 +244,7 @@ def fats():
         i2 = i2 - 1
     print('border_thickness:', border_thickness)
 
+    time1 = time.time()
     j_y_axis = border_thickness[0] + 1
     j_y_axis_r = border_thickness[0] + 1 + fat_min_diameter - 1 # fat_min_diameter - 1
     #while (j_y_axis_r < (border_thickness[1] - 1)):
@@ -330,33 +332,6 @@ def fats():
                     j_x_axis_r = j_x_axis_r + 1
             
             else:
-                j1 = 0 # for Y
-                while (j1 < fat_min_diameter):
-                    if flag1 == 1:
-                        break
-                    j2 = j_x_axis
-                    while (j2 <= j_x_axis_r):
-                        if img_grid[(j_y_axis * x_axis) + j2 + (j1 * x_axis)] == temp1:
-                            #if img_grid[(j_y_axis * (border_thickness[3] - border_thickness[2] - 1)) + j2 + (j1 * (border_thickness[3] - border_thickness[2] - 1))] == temp1:
-                            j2 = j2 + 1
-                        else:
-                            flag1 = 1
-                            break
-                    j1 = j1 + 1
-                if flag1 == 0:
-                    if len(temp1) > 0:
-                        if len(temp1[0]) == 1:
-                            combined_fats[temp1[0][0]][1] = 1
-                            combined_fats[temp1[0][0]][2] = fat_min_diameter
-                        else:
-                            j = 0
-                            while (j < len(segmented_fats[temp1[0][0]])):
-                                if segmented_fats[temp1[0][0]][j][1] == temp1[0][1]:
-                                    segmented_fats[temp1[0][0]][j][2] = 1
-                                    segmented_fats[temp1[0][0]][j][3] = fat_min_diameter
-                                    break
-                                j = j + 1
-
                 j_x_axis = j_x_axis + 1
                 j_x_axis_r = j_x_axis_r + 1
         j_y_axis = j_y_axis + 1
@@ -448,36 +423,13 @@ def fats():
                         j_x_axis_r = j_x_axis_r + 1
             
                 else:
-                    j1 = 0 # for Y
-                    while (j1 < fat_max_diameter):
-                        if flag1 == 1:
-                            break
-                        j2 = j_x_axis
-                        while (j2 <= j_x_axis_r):
-                            if img_grid[(j_y_axis * x_axis) + j2 + (j1 * x_axis)] == temp1:
-                                #if img_grid[(j_y_axis * (border_thickness[3] - border_thickness[2] - 1)) + j2 + (j1 * (border_thickness[3] - border_thickness[2] - 1))] == temp1:
-                                j2 = j2 + 1
-                            else:
-                                flag1 = 1
-                                break
-                        j1 = j1 + 1
-                    if flag1 == 0:
-                        if len(temp1) > 0:
-                            if len(temp1[0]) == 1:
-                                combined_fats[temp1[0][0]][2] = fat_max_diameter
-                            else:
-                                j = 0
-                                while (j < len(segmented_fats[temp1[0][0]])):
-                                    if segmented_fats[temp1[0][0]][j][1] == temp1[0][1]:
-                                        segmented_fats[temp1[0][0]][j][3] = fat_max_diameter
-                                        break
-                                    j = j + 1
-
                     j_x_axis = j_x_axis + 1
                     j_x_axis_r = j_x_axis_r + 1
             j_y_axis = j_y_axis + 1
             j_y_axis_r = j_y_axis_r + 1
-
+    
+    print('Time taken: ' + str(time.time() - time1) + ' seconds')
+    
     combined_dataset_boundary = []
     #combined_dataset_boundary1 = []
     i = 0 # remove groups of combined_dataset having edges in boundary
