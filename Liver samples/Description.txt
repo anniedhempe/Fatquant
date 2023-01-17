@@ -1,1 +1,1 @@
-Directory contains the 10 test samples of liver images.
+Directory contains the 10 test samples of liver images and an 8K resolution image.
