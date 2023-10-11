@@ -6,8 +6,8 @@
 This tool was designed for the experiment mentioned in:
 [https://www.sciencedirect.com/science/article/pii/S2667160323000133]
 
-GUI version link:
-[[https://github.com/nehalkalita/Fatquant-GUI]
+GUI version avaliable in:
+[https://github.com/nehalkalita/Fatquant-GUI]
 
 ### Requirements for Python programs
 * Python 3 distribution: Anaconda
